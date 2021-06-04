@@ -24,4 +24,8 @@ describe('tests on the <GifGridItem /> component', () => {
     expect(img.prop('src')).toBe(item.url);
     expect(img.prop('alt')).toBe(item.title);
   });
+  test('should have class animate__fadeIn', () => {
+    const div = wrapper.find('div');
+    expect(div.hasClass('animate__fadeIn')).toBe(true);
+  });
 });
