@@ -15,4 +15,8 @@ describe('tests on the <GifGridItem /> component', () => {
   test('should display the <GifGridItem /> component correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+  test('should render a paragraph with the title received in its properties', () => {
+    const paragraph = wrapper.find('p');
+    expect(paragraph.text().trim()).toBe(item.title);
+  });
 });
