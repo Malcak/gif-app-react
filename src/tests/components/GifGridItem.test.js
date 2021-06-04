@@ -19,4 +19,9 @@ describe('tests on the <GifGridItem /> component', () => {
     const paragraph = wrapper.find('p');
     expect(paragraph.text().trim()).toBe(item.title);
   });
+  test('should correctly render the image and its properties', () => {
+    const img = wrapper.find('img');
+    expect(img.prop('src')).toBe(item.url);
+    expect(img.prop('alt')).toBe(item.title);
+  });
 });
